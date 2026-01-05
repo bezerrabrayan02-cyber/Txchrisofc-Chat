@@ -2,107 +2,173 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>TX CHRIS - KEY SYSTEM</title>
+<title>TX CHRIS • Site Oficial</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: white;
-    text-align: center;
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0a0a0a;
+    color:#fff;
 }
-
-header {
-    background: linear-gradient(90deg, #ff0066, #7928ca);
-    padding: 20px;
-    font-size: 22px;
-    font-weight: bold;
+header{
+    padding:25px;
+    text-align:center;
+    background:linear-gradient(90deg,#ff004c,#6a00ff);
+    font-size:26px;
+    font-weight:bold;
 }
-
-.container {
-    margin: 40px auto;
-    max-width: 360px;
-    background: #1c1c1c;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+section{
+    padding:25px;
+    border-bottom:1px solid #222;
 }
-
-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background: #ff0066;
-    color: white;
-    cursor: pointer;
+.box{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:15px;
+    margin:15px auto;
+    max-width:800px;
 }
-
-button:hover {
-    background: #ff3385;
+.ad{
+    background:#222;
+    border:1px dashed #555;
+    padding:15px;
+    margin:15px auto;
+    max-width:780px;
+    border-radius:12px;
+    color:#ccc;
+    text-align:center;
 }
-
-.key-box {
-    background: black;
-    padding: 14px;
-    margin-top: 15px;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    word-break: break-all;
+h2{color:#ff4cff}
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:12px;
+    background:#ff004c;
+    color:#fff;
+    font-size:18px;
 }
-
-small {
-    opacity: 0.7;
-}
+a{color:#00ffff;text-decoration:none}
+.timer{font-size:22px;color:#00ff99}
 </style>
+
+<script>
+let t = 20;
+function startTimer(){
+    if(t<=0){
+        document.getElementById("btnDownload").style.display="block";
+        return;
+    }
+    document.getElementById("tempo").innerText = t;
+    t--;
+    setTimeout(startTimer,1000);
+}
+window.onload=startTimer;
+</script>
 </head>
 
 <body>
 
-<header>🔐 TX CHRIS KEY SYSTEM</header>
+<header>🔥 TX CHRIS • SITE OFICIAL 🔥</header>
 
-<div class="container">
-    <h2>Gerar sua Key</h2>
-    <p>Clique no botão abaixo</p>
-
-    <button onclick="gerarKey()">GERAR KEY</button>
-
-    <div id="keyBox" class="key-box">---</div>
-
-    <button onclick="copiarKey()">COPIAR KEY</button>
-
-    <p><small>Validade até 06/01/2026</small></p>
+<section>
+<div class="box">
+<h2>⚠️ AVISO IMPORTANTE</h2>
+<p>
+Este site é apenas para fins educacionais e demonstrativos.  
+O uso de modificações pode resultar em penalidades.
+</p>
 </div>
 
-<script>
-function gerarKey() {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    let key = "TX-";
+<div class="ad">📢 Anúncio: Atualização diária disponível</div>
+</section>
 
-    for (let i = 0; i < 10; i++) {
-        key += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
+<section>
+<div class="box">
+<h2>🚀 SOBRE O PROJETO</h2>
+<p>
+TX CHRIS é um projeto criado para estudo, testes visuais e aprendizado.
+Compatível com diversos dispositivos Android.
+</p>
+</div>
 
-    document.getElementById("keyBox").innerText = key;
-}
+<div class="ad">📢 Anúncio: Melhor desempenho em celulares fracos</div>
+</section>
 
-function copiarKey() {
-    const key = document.getElementById("keyBox").innerText;
-    if (key === "---") {
-        alert("Gere a key primeiro!");
-        return;
-    }
+<section>
+<div class="box">
+<h2>⚙️ FUNCIONALIDADES</h2>
+<ul>
+<li>Interface otimizada</li>
+<li>Menus leves</li>
+<li>Compatibilidade ampla</li>
+<li>Estabilidade visual</li>
+<li>Fácil uso</li>
+</ul>
+</div>
 
-    navigator.clipboard.writeText(key).then(() => {
-        alert("Key copiada com sucesso!");
-    });
-}
-</script>
+<div class="ad">📢 Anúncio: Novas funções em breve</div>
+</section>
+
+<section>
+<div class="box">
+<h2>📘 COMO USAR</h2>
+<ol>
+<li>Baixe o arquivo</li>
+<li>Instale no seu dispositivo</li>
+<li>Abra normalmente</li>
+<li>Aproveite a experiência</li>
+</ol>
+</div>
+
+<div class="ad">⚠️ Use com responsabilidade</div>
+</section>
+
+<section>
+<div class="box">
+<h2>📜 REGRAS</h2>
+<p>
+🚫 Não revender  
+<br>🚫 Não modificar  
+<br>🚫 Não distribuir links falsos  
+<br>✅ Uso pessoal
+</p>
+</div>
+
+<div class="ad">📢 Entre no Telegram oficial</div>
+</section>
+
+<section>
+<div class="box">
+<h2>⏳ AGUARDE PARA LIBERAR DOWNLOAD</h2>
+<p>Aguarde <span id="tempo" class="timer">20</span> segundos</p>
+
+<div id="btnDownload" style="display:none">
+<a href="https://www.mediafire.com/file/7vf35fwms19gt6w/TX_CHRIS_V5_CLONADO_-_BLOOD_STRIKER.apk/file">
+<button>⬇️ BAIXAR AGORA</button>
+</a>
+</div>
+</div>
+
+<div class="ad">⭐ Avalie o projeto</div>
+<div class="ad">📲 Compartilhe com amigos</div>
+</section>
+
+<section>
+<div class="box">
+<h2>💬 CONTATO</h2>
+<p>
+Dúvidas ou sugestões?<br>
+Entre em contato pelos canais oficiais.
+</p>
+</div>
+</section>
+
+<footer style="text-align:center;padding:20px;color:#777">
+© 2026 TX CHRIS • Todos os direitos reservados
+</footer>
 
 </body>
 </html>
